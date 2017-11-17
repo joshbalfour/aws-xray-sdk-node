@@ -26,7 +26,12 @@ var contextUtils = {
         var err = new Error(message);
         logger.getLogger().error(err.stack);
       }
-    }
+    },
+    SILENCE: {
+      contextMissing: function contextMissingLogError() {
+        // do nothing
+      },
+    },
   },
 
   contextMissingStrategy: {},
